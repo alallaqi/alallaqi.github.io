@@ -1,0 +1,111 @@
+@font-face {
+	src: url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2');
+	font-family:'Compressa VF';
+	font-style: normal;
+}
+html {
+	height:100%;
+}
+body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background:url("red.jpg");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	align-items: center;
+}
+header, footer, a {
+	color: rgba(255,255,255,0.9);
+	font-family: 'Compressa VF', sans-serif;
+	letter-spacing: 0.15em;
+	text-align: center;
+}
+
+@media screen and (max-width: 990px) {
+	header, footer, a {
+		font-size: 13px;
+	}
+}
+
+header, footer {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translatex(-50%);
+	        transform: translatex(-50%);
+	margin: 10vh auto;
+	width: 90%;
+}
+
+footer {
+	top: auto;
+	bottom: 0;
+}
+
+a {
+	margin: 1em;
+	display: inline-block;
+	text-decoration: none;
+	
+}
+
+a:after {
+	display: block;
+	content: '';
+	width: 0;
+	height: 3px;
+	margin-top: 0.25em;
+	background: #DD271A;
+	transition: width 0.25s ease-in-out;
+}
+
+a:hover:after {
+	width: 100%;
+}
+
+h1 {
+	font-family:'Compressa VF';
+	text-rendering: optimizeSpeed;
+	color: #DD271A;
+	width: 100%;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	line-height: 0.8em;
+	margin: 0 auto;
+	text-transform: uppercase;
+	font-weight: 100;
+	text-align: center;
+	width: 90vw;
+}
+h1 span {
+	-webkit-transform: translateY(-10px);
+	        transform: translateY(-10px);
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+h1.flex {
+	display: flex;
+	justify-content: space-between;
+}
+h1.stroke span {
+	position: relative;
+	color: #211D26;
+	line-height: inherit;
+}
+h1.stroke span:after {
+	content: attr(data-char);
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: #FE6730;
+	position: absolute;
+	left: 0;
+	line-height: inherit;
+	color: transparent;
+	z-index: -1;
+}
